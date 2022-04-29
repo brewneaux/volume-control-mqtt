@@ -7,7 +7,7 @@ RUN go mod download
 COPY . ./
 
 # Build the binary.
-RUN CGO_ENABLED=0 GOOS=linux go build -v -o volume_control_mqtt
+RUN CGO_ENABLED=0 GOOS=linux go build -v -o volume_control_mqtt --buildvcs=false
 
 FROM ubuntu:18.04
 
